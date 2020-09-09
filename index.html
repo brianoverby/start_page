@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>~/start_page</title>
+  </head>
+  <body>
+    
+    <div id="terminal">
+        
+        <span class="prompt">interwebs:~$</span> <span class="cmd">whoami</span><br>
+        <span class="cmd-reply">brian</span><br><br>
+
+        <span class="prompt">interwebs:~$</span> <span class="cmd">date +'%Y.%m.%d %R'</span><br>
+        <span id="datetime"></span><br><br>
+
+        <span class="prompt">interwebs:~$</span> <span class="cmd">cat links.txt</span><br>
+        <a href="https://www.dr.dk/">DR</a><br>
+        <a href="https://www.youtube.com/">YouTube</a><br>
+        <a href="https://feedly.com/">Feedly</a><br>
+        <a href="https://www.reddit.com/r/olkb/new/">/r/olkb</a><br>
+        <a href="https://www.reddit.com/r/MechanicalKeyboards/new/">/r/MechanicalKeyboards</a><br>
+        <a href="https://www.reddit.com/">Reddit</a><br>
+        <a href="https://www.keebtalk.com/">KeebTalk</a><br>
+        <a href="https://geekhack.org/">geekhack</a><br>
+        <a href="https://keycaplendar.firebaseapp.com/?page=calendar">KeycapLendar</a><br>
+        <a href="https://discord.com/">Discord</a><br><br>
+        <p id="date"></p>
+        
+        
+        <span class="prompt">interwebs:~$</span> <span class="blink">_</span>
+    </div>
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (dt.getFullYear()) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"." + (("0"+dt.getDate()).slice(-2)) +" "+  (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    </script>
+    </body>
+</html>  
+
+

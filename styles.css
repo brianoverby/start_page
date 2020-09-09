@@ -1,0 +1,62 @@
+:root {
+    --cultured: #f8f9faff;
+    --cultured-2: #e9ecefff;
+    --gainsboro: #dee2e6ff;
+    --light-gray: #ced4daff;
+    --cadet-blue-crayola: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --davys-grey: #495057ff;
+    --gunmetal: #343a40ff;
+    --charleston-green: #212529ff;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--cultured-2);
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: .01em;
+    font-size: 1.1em;
+  }
+
+#terminal {
+    margin: 2em auto;
+    width: 50em;
+    padding: 0.4em 0.4em 2em 0.4em;
+    border: 4px solid #000000;
+    background: var(--charleston-green);
+    color: var(--light-gray);
+}
+
+a {
+    color: var(--cadet-blue-crayola);
+    text-decoration: none;
+}
+
+a:hover {
+    transition: color .3s linear;
+    color: var(--cultured);
+}
+.prompt {
+    font-weight: 900;
+    color: var(--cultured);
+}
+
+.blink{
+    animation:blinkingText 1.0s infinite;
+    color: var(--cultured);
+}
+@keyframes blinkingText{
+    0%{   color: var(--cultured);   }
+    49%{  color: var(--cultured);   }
+    60%{  color: transparent; }
+    99%{  color: transparent; }
+    100%{ color: var(--cultured);   }
+}
